@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utsav — Indian Event Organizer 2026</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announce-bar">
+    <span>🔥 Sunburn Arena 2026 tickets selling fast — only 312 left!</span>
+    <a href="#events">Grab yours →</a>
+  </div>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="brand-icon">🪔</span>
+      <span class="brand-name">Utsav</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#events">Events</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#create">Create Event</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li id="nav-dashboard-li" style="display:none"><a href="#" onclick="openDashboard();return false">My Dashboard</a></li>
+    </ul>
+    <button class="btn-nav btn-login" id="btn-login-nav" onclick="openLoginModal()">Login</button>
+    <button class="btn-nav" onclick="openModal()">+ Host Event</button>
+    <button class="hamburger" id="hamburger">☰</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-tag">🇮🇳 India's Premier Event Platform · 2026</p>
+      <h1>Plan, Promote &amp;<br/>Celebrate Every <span>Utsav</span></h1>
+      <p class="hero-sub">From grand weddings to corporate summits, cultural festivals to college fests — manage it all in one place. No fuss, just vibes.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="document.getElementById('events').scrollIntoView({behavior:'smooth'})">Explore Events</button>
+        <button class="btn-outline" onclick="openModal()">Host Your Event</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>18K+</strong><span>Events Hosted</span></div>
+        <div class="stat"><strong>4.9★</strong><span>Avg Rating</span></div>
+        <div class="stat"><strong>36</strong><span>States Covered</span></div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="categories">
+    <div class="container">
+      <h2 class="section-title">Browse by Category</h2>
+      <div class="cat-grid">
+        <button class="cat-btn active" data-cat="all">🎉 All Events</button>
+        <button class="cat-btn" data-cat="wedding">💍 Weddings</button>
+        <button class="cat-btn" data-cat="festival">🪔 Festivals</button>
+        <button class="cat-btn" data-cat="corporate">💼 Corporate</button>
+        <button class="cat-btn" data-cat="music">🎵 Music</button>
+        <button class="cat-btn" data-cat="cultural">🎭 Cultural</button>
+        <button class="cat-btn" data-cat="sports">🏏 Sports</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="events-section" id="events">
+    <div class="container">
+      <div class="events-header">
+        <h2 class="section-title">Upcoming Events</h2>
+        <div class="search-bar">
+          <input type="text" id="search-input" placeholder="Search events, cities..." />
+          <span class="search-icon">🔍</span>
+        </div>
+      </div>
+      <div class="events-grid" id="events-grid"></div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-sub">Honestly, it's pretty simple. Three steps and you're live.</p>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3>Create your event</h3>
+          <p>Fill in the basics — name, date, venue. Takes about 3 minutes, maybe 5 if you're picky about the description.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3>Share it everywhere</h3>
+          <p>One link. Works on WhatsApp, Instagram stories, email — wherever your crowd hangs out.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3>Show up & celebrate</h3>
+          <p>We handle RSVPs, reminders, and tickets. You just focus on making it a night to remember.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-title">Why Choose Utsav?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feat-icon">📋</div>
+          <h3>Easy Planning</h3>
+          <p>Create detailed event pages with schedules, venue maps, and guest lists in minutes.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feat-icon">📣</div>
+          <h3>Smart Promotion</h3>
+          <p>Share across WhatsApp, Instagram & more. Reach lakhs of attendees instantly.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feat-icon">🎟️</div>
+          <h3>Ticket Management</h3>
+          <p>Sell tickets with UPI, cards & net banking. Auto-generate QR codes for entry.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feat-icon">📊</div>
+          <h3>Live Analytics</h3>
+          <p>Track RSVPs, ticket sales, and engagement in real-time from your dashboard.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feat-icon">🤝</div>
+          <h3>Vendor Connect</h3>
+          <p>Find caterers, decorators, photographers & DJs across all major Indian cities.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feat-icon">🔔</div>
+          <h3>Smart Reminders</h3>
+          <p>Automated WhatsApp & SMS reminders to attendees before the event.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title">What Organizers Are Saying</h2>
+      <p class="section-sub">Real people, real events. We didn't make these up (promise).</p>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <p class="testi-text">"Honestly wasn't sure about trying a new platform but Utsav made our Navratri event so smooth. Ticket scanning at the gate was chef's kiss 🤌"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">PD</div>
+            <div>
+              <strong>Priya Desai</strong>
+              <span>Garba Organizer, Ahmedabad</span>
+            </div>
+          </div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+        <div class="testi-card testi-featured">
+          <p class="testi-text">"We've tried 3 other platforms before this. Nothing comes close for Indian events. The WhatsApp reminder feature alone saved us from 200+ no-shows at our corporate summit."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">RK</div>
+            <div>
+              <strong>Rahul Khanna</strong>
+              <span>Event Head, TechCorp India</span>
+            </div>
+          </div>
+          <div class="testi-stars">★★★★★</div>
+        </div>
+        <div class="testi-card">
+          <p class="testi-text">"Set up our wedding expo page in like 20 mins. Got 400 registrations in the first week. My co-organizer still doesn't believe it was that easy lol"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">SM</div>
+            <div>
+              <strong>Sneha Mehta</strong>
+              <span>Wedding Planner, Udaipur</span>
+            </div>
+          </div>
+          <div class="testi-stars">★★★★☆</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREATE EVENT CTA -->
+  <section class="cta-section" id="create">
+    <div class="container cta-inner">
+      <div class="cta-text">
+        <h2>Ready to Host Your Next Big Event?</h2>
+        <p>Join 75,000+ organizers across India who trust Utsav for their events.</p>
+      </div>
+      <button class="btn-primary btn-large" onclick="openModal()">Create Event Now — It's Free</button>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item"><span>📍</span><p>Connaught Place, New Delhi — 110001</p></div>
+          <div class="contact-item"><span>📞</span><p>+91 98765 43210</p></div>
+          <div class="contact-item"><span>✉️</span><p>namaste@utsav.in</p></div>
+          <div class="contact-item"><span>🕐</span><p>Mon–Sat, 9 AM – 7 PM IST</p></div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Email Address" required />
+          <input type="tel" placeholder="Mobile Number" />
+          <textarea placeholder="Tell us about your event..." rows="4" required></textarea>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-icon">🪔</span>
+        <span class="brand-name">Utsav</span>
+        <p>Celebrating India, one event at a time.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Platform</h4>
+        <a href="#">Browse Events</a>
+        <a href="#">Create Event</a>
+        <a href="#">Pricing</a>
+        <a href="#">Mobile App</a>
+      </div>
+      <div class="footer-links">
+        <h4>Support</h4>
+        <a href="#">Help Center</a>
+        <a href="#">Vendor Partners</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <div class="footer-links">
+        <h4>Follow Us</h4>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">YouTube</a>
+        <a href="#">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Utsav Events Pvt. Ltd. · Made with ❤️ in India 🇮🇳</p>
+    </div>
+  </footer>
+
+  <!-- LOGIN / SIGNUP MODAL -->
+  <div class="modal-overlay" id="login-modal-overlay" onclick="closeLoginModal(event)">
+    <div class="modal" style="max-width:420px">
+      <button class="modal-close" onclick="closeLoginModal()">✕</button>
+      <div id="auth-tabs" style="display:flex;gap:0;margin-bottom:24px;border-radius:10px;overflow:hidden;border:1px solid var(--border)">
+        <button class="auth-tab active" id="tab-login" onclick="switchAuthTab('login')">Login</button>
+        <button class="auth-tab" id="tab-signup" onclick="switchAuthTab('signup')">Sign Up</button>
+      </div>
+      <!-- Login Form -->
+      <form id="login-form" onsubmit="handleLogin(event)">
+        <h2 style="margin-bottom:20px">👋 Welcome Back</h2>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="login-email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="login-pass" placeholder="••••••••" required />
+        </div>
+        <button type="submit" class="btn-primary btn-full">Login</button>
+      </form>
+      <!-- Signup Form -->
+      <form id="signup-form" style="display:none" onsubmit="handleSignup(event)">
+        <h2 style="margin-bottom:20px">🎉 Create Account</h2>
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="signup-name" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="signup-email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="signup-pass" placeholder="Min 6 characters" minlength="6" required />
+        </div>
+        <button type="submit" class="btn-primary btn-full">Create Account</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- BOOK TICKETS MODAL -->
+  <div class="modal-overlay" id="book-modal-overlay" onclick="closeBookModal(event)">
+    <div class="modal" style="max-width:480px">
+      <button class="modal-close" onclick="closeBookModal()">✕</button>
+      <div id="book-step-1">
+        <h2 id="book-event-title" style="margin-bottom:6px">Book Tickets</h2>
+        <p id="book-event-meta" style="color:var(--muted);font-size:0.85rem;margin-bottom:20px"></p>
+        <form id="book-form" onsubmit="handleBooking(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" id="book-name" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <label>Email *</label>
+              <input type="email" id="book-email" placeholder="you@example.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Mobile *</label>
+              <input type="tel" id="book-phone" placeholder="+91 XXXXX XXXXX" required />
+            </div>
+            <div class="form-group">
+              <label>Tickets</label>
+              <input type="number" id="book-qty" value="1" min="1" max="10" required />
+            </div>
+          </div>
+          <div id="book-price-summary" style="background:var(--dark);border-radius:10px;padding:14px;margin-bottom:16px;font-size:0.88rem">
+            <div style="display:flex;justify-content:space-between;margin-bottom:6px">
+              <span style="color:var(--muted)">Price per ticket</span>
+              <span id="book-unit-price"></span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-weight:700;font-size:1rem">
+              <span>Total</span>
+              <span id="book-total" style="color:var(--saffron)"></span>
+            </div>
+          </div>
+          <button type="submit" class="btn-primary btn-full" id="book-submit-btn">Proceed to Pay →</button>
+        </form>
+      </div>
+      <!-- Payment Step -->
+      <div id="book-step-2" style="display:none;text-align:center">
+        <div style="font-size:3rem;margin-bottom:12px">📱</div>
+        <h2 style="margin-bottom:8px">Pay via UPI</h2>
+        <p style="color:var(--muted);font-size:0.88rem;margin-bottom:20px">Scan QR or pay to UPI ID below</p>
+        <div style="background:var(--dark);border-radius:12px;padding:20px;margin-bottom:20px">
+          <div style="width:120px;height:120px;background:#fff;border-radius:8px;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:#333">QR Code<br/>Placeholder</div>
+          <p style="font-size:0.9rem;font-weight:600">utsav@upi</p>
+          <p id="pay-amount" style="color:var(--saffron);font-size:1.2rem;font-weight:700;margin-top:6px"></p>
+        </div>
+        <button class="btn-primary btn-full" onclick="confirmPayment()">✅ I've Paid — Confirm Booking</button>
+      </div>
+      <!-- Confirmation Step -->
+      <div id="book-step-3" style="display:none;text-align:center;padding:20px 0">
+        <div style="font-size:4rem;margin-bottom:16px">🎟️</div>
+        <h2 style="margin-bottom:8px">Booking Confirmed!</h2>
+        <p style="color:var(--muted);font-size:0.88rem;margin-bottom:20px">Your e-ticket has been sent to your email.</p>
+        <div id="ticket-details" style="background:var(--dark);border-radius:12px;padding:20px;text-align:left;font-size:0.85rem;margin-bottom:20px"></div>
+        <button class="btn-primary btn-full" onclick="closeBookModal()">Done 🎉</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHARE MODAL -->
+  <div class="modal-overlay" id="share-modal-overlay" onclick="closeShareModal(event)">
+    <div class="modal" style="max-width:380px">
+      <button class="modal-close" onclick="closeShareModal()">✕</button>
+      <h2 style="margin-bottom:6px">📣 Share Event</h2>
+      <p id="share-event-name" style="color:var(--muted);font-size:0.85rem;margin-bottom:24px"></p>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <button class="btn-share-opt" id="share-whatsapp" onclick="shareWhatsApp()">💬 Share on WhatsApp</button>
+        <button class="btn-share-opt" onclick="shareTwitter()">🐦 Share on Twitter / X</button>
+        <button class="btn-share-opt" onclick="copyEventLink()">🔗 Copy Event Link</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ORGANIZER DASHBOARD MODAL -->
+  <div class="modal-overlay" id="dashboard-modal-overlay" onclick="closeDashboard(event)">
+    <div class="modal" style="max-width:700px">
+      <button class="modal-close" onclick="closeDashboard()">✕</button>
+      <h2 style="margin-bottom:4px">📊 Organizer Dashboard</h2>
+      <p id="dash-user-name" style="color:var(--muted);font-size:0.85rem;margin-bottom:24px"></p>
+      <div id="dash-stats" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px"></div>
+      <h3 style="font-size:1rem;margin-bottom:14px">My Events</h3>
+      <div id="dash-events-list"></div>
+      <button class="btn-primary" style="margin-top:20px;background:transparent;border:1.5px solid #e55;color:#e55" onclick="handleLogout()">Logout</button>
+    </div>
+  </div>
+
+  <!-- CREATE EVENT MODAL -->
+  <div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <h2>🎉 Create New Event</h2>
+      <form id="create-event-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Event Name *</label>
+            <input type="text" id="ev-name" placeholder="e.g. Navratri Garba Night" required />
+          </div>
+          <div class="form-group">
+            <label>Category *</label>
+            <select id="ev-cat" required>
+              <option value="">Select Category</option>
+              <option value="wedding">💍 Wedding</option>
+              <option value="festival">🪔 Festival</option>
+              <option value="corporate">💼 Corporate</option>
+              <option value="music">🎵 Music</option>
+              <option value="cultural">🎭 Cultural</option>
+              <option value="sports">🏏 Sports</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Date *</label>
+            <input type="date" id="ev-date" required />
+          </div>
+          <div class="form-group">
+            <label>Time *</label>
+            <input type="time" id="ev-time" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>City *</label>
+            <input type="text" id="ev-city" placeholder="e.g. Mumbai" required />
+          </div>
+          <div class="form-group">
+            <label>Venue *</label>
+            <input type="text" id="ev-venue" placeholder="e.g. NSCI Dome" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Ticket Price (₹)</label>
+            <input type="number" id="ev-price" placeholder="0 for free" min="0" />
+          </div>
+          <div class="form-group">
+            <label>Max Attendees</label>
+            <input type="number" id="ev-capacity" placeholder="e.g. 500" min="1" />
+          </div>
+        </div>
+        <div class="form-group full">
+          <label>Description *</label>
+          <textarea id="ev-desc" rows="3" placeholder="Describe your event..." required></textarea>
+        </div>
+        <div class="form-group full">
+          <label>Event Image URL</label>
+          <input type="url" id="ev-img" placeholder="https://..." />
+        </div>
+        <button type="submit" class="btn-primary btn-full">🚀 Publish Event</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- RSVP TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
